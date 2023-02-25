@@ -17,10 +17,7 @@
     "react"
   ],
   "rules": {
-    "linebreak-style": [
-      "error",
-      "windows"
-    ],
+    "linebreak-style": "off",
     "prettier/prettier": [
       "error",
       {
@@ -29,6 +26,5 @@
     ],
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
-    "no-undef": "off"
   }
 }

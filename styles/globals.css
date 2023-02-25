@@ -2,12 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  box-sizing: border-box;
+html,
+body {
   padding: 0;
+  margin: 0;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  min-height: 100vh;
+  background-color: #F2F8F9;
+}
+
+a,
+li,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+input,
+textarea {
+  background: none;
+  font-family: 'Open Sans', 'sans', sans-serif !important;
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   margin: 0;
 }
 
-body {
-  min-width: 100vw;
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+li {
+  cursor: default;
 }
