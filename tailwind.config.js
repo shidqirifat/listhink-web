@@ -18,6 +18,9 @@ module.exports = {
         warning: '#D4B672',
         danger: '#EB455F'
       }
+    },
+    fontFamily: {
+      inter: 'Inter'
     }
   },
   plugins: []

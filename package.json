@@ -12,6 +12,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@fontsource/inter": "^4.5.15",
     "@fontsource/poppins": "^4.5.10",
     "@next/font": "13.1.1",
     "i18next": "^22.4.10",
