@@ -24,7 +24,7 @@ const CardService = ({ title, description, image, i }) => {
         }`}>
         <Image src={image} alt={title} fill className="object-contain" />
       </div>
-      <div className={`relative ${i % 2 === 0 ? '' : 'left-20 w-[95%]'}`}>
+      <div className={`relative ${i % 2 === 0 ? '' : 'left-20 w-[83%]'}`}>
         <h1 className="font-semibold text-6xl leading-[70px] text-gray-primary font-inter">
           0{i + 1}
         </h1>

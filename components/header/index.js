@@ -16,7 +16,7 @@ const TextNav = ({ children, link }) => {
 
 export default function Header() {
   return (
-    <div className="shadow-sm border-b border-gray-primary sticky top-0 z-10 bg-white-primary">
+    <div className="shadow-sm border-b border-gray-primary sticky top-0 z-40 bg-white-primary">
       <div className="max-w-7xl px-3 mx-auto flex justify-between items-center h-20">
         <Image
           src="assets/logos/listhink-studio.svg"
@@ -31,7 +31,7 @@ export default function Header() {
             <TextNav link="#services">Layanan</TextNav>
           </ul>
         </div>
-        <Button>Mari Berdiskusi</Button>
+        <Button style="text-base leading-6">Mari Berdiskusi</Button>
       </div>
     </div>
   );

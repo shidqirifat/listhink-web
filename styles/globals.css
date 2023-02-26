@@ -49,3 +49,11 @@ input[type=number] {
 li {
   cursor: default;
 }
+
+.swiper-pagination {
+  padding-top: 20em;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #202224 !important;
+}
