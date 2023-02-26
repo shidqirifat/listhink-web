@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Arrow from 'public/assets/icons/arrow-process-left.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Scrollbar } from 'swiper';
@@ -23,8 +23,62 @@ const processData = [
     title: 'Kontrak',
     description: 'Klien dan agensi menandatangani kontrak yang meresmikan kesepakatan.',
     image: '/assets/images/process-3.png'
+  },
+  {
+    title: 'Pengarahan',
+    description:
+      'Klien memberi agensi penjelasan singkat tentang harapan mereka untuk proyek tersebut.',
+    image: '/assets/images/process-1.png'
+  },
+  {
+    title: 'Negosiasi',
+    description:
+      'Klien dan agensi menegosiasikan rincian proposal, termasuk ruang lingkup pekerjaan, anggaran, dan jadwal.',
+    image: '/assets/images/process-2.png'
+  },
+  {
+    title: 'Kontrak',
+    description: 'Klien dan agensi menandatangani kontrak yang meresmikan kesepakatan.',
+    image: '/assets/images/process-3.png'
+  },
+  {
+    title: 'Pengarahan',
+    description:
+      'Klien memberi agensi penjelasan singkat tentang harapan mereka untuk proyek tersebut.',
+    image: '/assets/images/process-1.png'
+  },
+  {
+    title: 'Negosiasi',
+    description:
+      'Klien dan agensi menegosiasikan rincian proposal, termasuk ruang lingkup pekerjaan, anggaran, dan jadwal.',
+    image: '/assets/images/process-2.png'
+  },
+  {
+    title: 'Kontrak',
+    description: 'Klien dan agensi menandatangani kontrak yang meresmikan kesepakatan.',
+    image: '/assets/images/process-3.png'
   }
 ];
+
+const getPaddingSide = (ref) => {
+  if (typeof window === 'undefined') return 4;
+
+  return (window.screen.width - ref.current?.offsetWidth) / 2;
+};
+
+const getSlidesPerView = () => {
+  if (typeof window === 'undefined') return 3;
+
+  return window.screen.width / 520;
+};
+
+const getStylesCarosel = (ref) => {
+  return {
+    paddingBottom: '50px',
+    paddingLeft: getPaddingSide(ref),
+    paddingRight: getPaddingSide(ref)
+  };
+};
 
 const ButtonCarousel = ({ isRight, onClick }) => {
   return (
@@ -44,7 +98,7 @@ const ButtonCarousel = ({ isRight, onClick }) => {
 
 const CardProcess = ({ number, title, description, image }) => {
   return (
-    <div className="rounded-[40px] border border-gray-primary shadow-lg h-full">
+    <div className="rounded-[40px] border border-gray-primary shadow-lg overflow-hidden h-full">
       <div className="w-full h-[192px] relative">
         <Image src={image} alt={title} fill />
       </div>
@@ -61,16 +115,17 @@ const CardProcess = ({ number, title, description, image }) => {
 
 export default function FlowProcess() {
   const [swiper, setSwiper] = useState();
+  const ref = useRef();
 
   return (
-    <div className="max-w-7xl px-3 mx-auto mt-[140px] relative">
-      <div className="flex justify-between items-center">
+    <div className="mt-[140px] relative">
+      <div ref={ref} className="max-w-7xl px-3 mx-auto flex justify-between items-center">
         <h1 className="font-inter font-semibold text-[40px] leading-[48px] text-black-primary">
           Proses Pengerjaan
         </h1>
         <div className="flex justify-between items-center gap-7">
           <ButtonCarousel onClick={() => swiper.slideTo(swiper.activeIndex - 3)} />
-          <ButtonCarousel onClick={() => swiper.slideTo(swiper.activeIndex + 3)} isRight />
+          <ButtonCarousel isRight onClick={() => swiper.slideTo(swiper.activeIndex + 3)} />
         </div>
       </div>
       <div className="flex mt-7">
@@ -78,11 +133,11 @@ export default function FlowProcess() {
           onInit={(swiper) => setSwiper(swiper)}
           modules={[Pagination, Scrollbar]}
           spaceBetween={50}
-          slidesPerView={3}
+          slidesPerView={getSlidesPerView()}
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          style={{ paddingBottom: '50px' }}>
+          style={getStylesCarosel(ref)}>
           {processData.map((process, i) => (
             <SwiperSlide key={i}>
               <CardProcess {...process} number={`0${i + 1}`} />
