@@ -25,38 +25,39 @@ const processData = [
     image: '/assets/images/process-3.png'
   },
   {
-    title: 'Pengarahan',
+    title: 'Penemuan',
     description:
-      'Klien memberi agensi penjelasan singkat tentang harapan mereka untuk proyek tersebut.',
-    image: '/assets/images/process-1.png'
+      'Agensi melakukan penelitian dan analisis untuk mendapatkan pemahaman yang lebih dalam tentang proyek dan bisnis klien.',
+    image: '/assets/images/process-4.png'
   },
   {
-    title: 'Negosiasi',
+    title: 'Strategi',
     description:
-      'Klien dan agensi menegosiasikan rincian proposal, termasuk ruang lingkup pekerjaan, anggaran, dan jadwal.',
-    image: '/assets/images/process-2.png'
+      'Agensi mengembangkan strategi untuk proyek yang menguraikan pendekatan, taktik, dan tujuan.',
+    image: '/assets/images/process-5.png'
   },
   {
-    title: 'Kontrak',
-    description: 'Klien dan agensi menandatangani kontrak yang meresmikan kesepakatan.',
-    image: '/assets/images/process-3.png'
-  },
-  {
-    title: 'Pengarahan',
+    title: 'Desain & Pengembangan',
     description:
-      'Klien memberi agensi penjelasan singkat tentang harapan mereka untuk proyek tersebut.',
-    image: '/assets/images/process-1.png'
+      'Memulai fase desain dan pengembangan, menciptakan produk atau layanan sebagaimana diuraikan dalam strategi',
+    image: '/assets/images/process-6.png'
   },
   {
-    title: 'Negosiasi',
+    title: 'Pengujian',
     description:
-      'Klien dan agensi menegosiasikan rincian proposal, termasuk ruang lingkup pekerjaan, anggaran, dan jadwal.',
-    image: '/assets/images/process-2.png'
+      'Menguji produk atau layanan untuk memastikannya memenuhi standar dan persyaratan kualitas.',
+    image: '/assets/images/process-7.png'
   },
   {
-    title: 'Kontrak',
-    description: 'Klien dan agensi menandatangani kontrak yang meresmikan kesepakatan.',
-    image: '/assets/images/process-3.png'
+    title: 'Peluncuran',
+    description: 'Produk atau layanan diluncurkan ke publik atau ke pelanggan klien.',
+    image: '/assets/images/process-8.png'
+  },
+  {
+    title: 'Pemeliharaan',
+    description:
+      'Memberikan pemeliharaan berkelanjutan untuk memastikan bahwa produk atau layanan terus berfungsi secara efektif.',
+    image: '/assets/images/process-9.png'
   }
 ];
 

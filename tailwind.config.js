@@ -14,6 +14,7 @@ module.exports = {
         'yellow-primary': '#FFDB89',
         'yellow-secondary': '#FFF3D8',
         'gray-primary': '#D2D3D3',
+        'grey-primary': '#E5E5E5',
         netral: '#B2B2B2',
         warning: '#D4B672',
         danger: '#EB455F'

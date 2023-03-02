@@ -39,16 +39,16 @@ const CardService = ({ title, description, image, i }) => {
 
 export default function Services() {
   return (
-    <div className="max-w-7xl px-3 mx-auto mt-[120px]">
-      <div className="flex justify-between items-center">
-        <h1 className="text-green-primary font-semibold text-8xl leading-[100px] w-full font-inter">
+    <div id="services" className="max-w-7xl px-3 mx-auto pt-[120px]">
+      <div className="flex justify-between items-center pt-4 px-8 pb-8 gap-14 bg-grey-primary rounded-tl-[32px] rounded-br-[32px]">
+        <h1 className="text-green-primary font-semibold text-8xl leading-[100px] w-10/12 font-inter">
           Layanan Kami
         </h1>
-        <div className="">
-          <h4 className="font-semibold text-2xl leading-7 text-black-primary">
+        <div>
+          <h4 className="font-semibold text-2xl leading-8 text-black-primary">
             Beberapa layanan yang dapat membantu kebutuhan anda.
           </h4>
-          <hr className="w-64 bg-gray-primary mt-6" />
+          <hr className="w-64 border border-green-primary mt-6" />
         </div>
       </div>
       <div className="mt-[60px] flex flex-col gap-[60px]">

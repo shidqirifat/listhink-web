@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from 'components/header';
+import NavDrawer from 'components/global/NavDrawer';
 import Hero from 'components/home/Hero';
 import Vision from 'components/home/Vision';
 import Services from 'components/home/Services';
@@ -10,13 +10,14 @@ import ContactUs from 'components/home/ContactUs';
 export default function Home() {
   return (
     <div className="bg-white-primary min-h-screen">
-      <Header />
+      <NavDrawer />
       <Hero />
       <Vision />
       <Services />
       <Benefit />
       <FlowProcess />
       <ContactUs />
+      <NavDrawer isFooter />
     </div>
   );
 }
