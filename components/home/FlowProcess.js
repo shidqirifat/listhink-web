@@ -64,7 +64,7 @@ const processData = [
 const getPaddingSide = (ref) => {
   if (typeof window === 'undefined') return 4;
 
-  return (window.screen.width - ref.current?.offsetWidth) / 2;
+  return (window.screen.width - ref.offsetWidth) / 2;
 };
 
 const getSlidesPerView = () => {
@@ -74,6 +74,8 @@ const getSlidesPerView = () => {
 };
 
 const getStylesCarosel = (ref) => {
+  if (!ref) return null;
+
   return {
     paddingBottom: '50px',
     paddingLeft: getPaddingSide(ref),
@@ -138,7 +140,7 @@ export default function FlowProcess() {
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          style={getStylesCarosel(ref)}>
+          style={getStylesCarosel(ref.current)}>
           {processData.map((process, i) => (
             <SwiperSlide key={i}>
               <CardProcess {...process} number={`0${i + 1}`} />
