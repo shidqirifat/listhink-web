@@ -64,13 +64,7 @@ const processData = [
 const getPaddingSide = (ref) => {
   if (typeof window === 'undefined') return 4;
 
-  return (window.screen.width - ref.offsetWidth) / 2;
-};
-
-const getSlidesPerView = () => {
-  if (typeof window === 'undefined') return 3;
-
-  return window.screen.width / 520;
+  return (window.innerWidth - ref.offsetWidth) / 2;
 };
 
 const getStylesCarosel = (ref) => {
@@ -133,10 +127,11 @@ export default function FlowProcess() {
       </div>
       <div className="flex mt-7">
         <Swiper
+          key={ref.current}
           onInit={(swiper) => setSwiper(swiper)}
           modules={[Pagination, Scrollbar]}
           spaceBetween={50}
-          slidesPerView={getSlidesPerView()}
+          slidesPerView={2.8}
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
