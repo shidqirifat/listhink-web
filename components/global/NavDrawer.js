@@ -59,7 +59,9 @@ export default function NavDrawer({ isFooter = false }) {
             &#169; 2023 Listhink Studio
           </h2>
         ) : (
-          <Button style="text-base leading-6">Mari Berdiskusi</Button>
+          <Button href="#contact-us" style="text-base leading-6">
+            Mari Berdiskusi
+          </Button>
         )}
       </div>
     </div>

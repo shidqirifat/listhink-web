@@ -4,6 +4,7 @@ import React from 'react';
 import Instagram from 'public/assets/icons/instagram.svg';
 import Arrow from 'public/assets/icons/arrow-benefit.svg';
 import FormContact from './FormContact';
+import Link from 'next/link';
 
 export default function ContactUs() {
   return (
@@ -12,14 +13,16 @@ export default function ContactUs() {
         <h1 className="font-inter font-semibold text-[80px] leading-[96px] text-black-primary mb-[60px]">
           Diskusikan kebutuhanmu bersama kami{' '}
         </h1>
-        <Button style="text-xl leading-7">Diskusi Sekarang</Button>
+        <Button href="#contact-us" style="text-xl leading-7">
+          Diskusi Sekarang
+        </Button>
       </div>
-      <div className="mt-36 grid grid-cols-[auto_510px] gap-24">
-        <div className="">
+      <div id="contact-us" className="mt-36 grid grid-cols-[auto_510px] gap-24">
+        <div>
           <h1 className="font-semibold text-[80px] leading-[96px] text-black-primary font-inter">
             Hubungi Kami
           </h1>
-          <h2 className="font-medium text-2xl leading-9 text-black-primary mt-10 mb-6">
+          <h2 className="font-medium text-2xl leading-9 text-black-primary mt-10 mb-6 max-w-xl">
             Silahkan lengkapi form dibawah ini untuk segera berdiskusi bersama kami.
           </h2>
           <FormContact />
@@ -39,10 +42,12 @@ export default function ContactUs() {
             <h3 className="font-semibold text-xl leading-7 text-black-primary mb-4">
               Sosial Media
             </h3>
-            <div className="flex gap-2 items-center">
-              <Image src={Instagram} width={24} height={24} />
-              <h3 className="text-xl leading-7 text-black-primary">Instagram</h3>
-            </div>
+            <Link href="https://www.instagram.com/abdanahkam/" target="_blank">
+              <button className="flex gap-2 items-center">
+                <Image src={Instagram} width={24} height={24} />
+                <h3 className="text-xl leading-7 text-black-primary">Instagram</h3>
+              </button>
+            </Link>
           </div>
         </div>
       </div>
