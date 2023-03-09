@@ -20,9 +20,20 @@ export default function FormContact() {
     }, 5000);
   };
 
+  const validateEmptyForm = () => Object.values(form).some((input) => !input);
+
+  const validateEmail = (email) => {
+    // eslint-disable-next-line no-useless-escape
+    const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (email.match(mailFormat)) return true;
+
+    return false;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (Object.values(form).some((input) => !input)) return validateError();
+    if (validateEmptyForm()) return validateError();
+    if (!validateEmail(form.email)) return validateError('email');
 
     console.log(form);
     resetForm();

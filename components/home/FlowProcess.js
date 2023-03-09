@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Arrow from 'public/assets/icons/arrow-process-left.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Scrollbar } from 'swiper';
@@ -112,7 +112,17 @@ const CardProcess = ({ number, title, description, image }) => {
 
 export default function FlowProcess() {
   const [swiper, setSwiper] = useState();
+  const [styleSwiper, setStyleSwiper] = useState({});
   const ref = useRef();
+
+  useEffect(() => {
+    const handleResize = () => setStyleSwiper(getStylesCarosel(ref.current));
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div className="mt-[140px] relative">
@@ -135,7 +145,7 @@ export default function FlowProcess() {
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          style={getStylesCarosel(ref.current)}>
+          style={styleSwiper}>
           {processData.map((process, i) => (
             <SwiperSlide key={i}>
               <CardProcess {...process} number={`0${i + 1}`} />

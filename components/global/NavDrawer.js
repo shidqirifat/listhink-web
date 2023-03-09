@@ -36,8 +36,11 @@ const getStyleContainer = (isFooter) => {
 };
 
 export default function NavDrawer({ isFooter = false }) {
+  const TemplateElement = isFooter ? 'footer' : 'header';
+
   return (
-    <div className={`border-gray-primary bg-white-primary ${getStyleContainer(isFooter)}`}>
+    <TemplateElement
+      className={`border-gray-primary bg-white-primary ${getStyleContainer(isFooter)}`}>
       <div className="max-w-7xl px-3 mx-auto flex justify-between items-center h-20">
         <Image
           src="assets/logos/listhink-studio.svg"
@@ -45,7 +48,7 @@ export default function NavDrawer({ isFooter = false }) {
           width={128}
           height={56}
         />
-        <div>
+        <nav>
           <ul className="flex items-center justify-center gap-16">
             {navigations.map((navigation) => (
               <TextNav key={navigation.link} link={navigation.link}>
@@ -53,7 +56,7 @@ export default function NavDrawer({ isFooter = false }) {
               </TextNav>
             ))}
           </ul>
-        </div>
+        </nav>
         {isFooter ? (
           <h2 className="text-base font-medium leading-6 text-black-primary">
             &#169; 2023 Listhink Studio
@@ -64,6 +67,6 @@ export default function NavDrawer({ isFooter = false }) {
           </Button>
         )}
       </div>
-    </div>
+    </TemplateElement>
   );
 }
