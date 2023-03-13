@@ -1,3 +1,102 @@
 {
-  "hello": "Hai"
+  "title_page": "Desain UI/UX dan Pengembangan Web",
+  "navigations": [
+    {
+      "link": "#home",
+      "text": "Beranda"
+    },
+    {
+      "link": "#about-us",
+      "text": "Tentang kami"
+    },
+    {
+      "link": "#services",
+      "text": "Layanan"
+    }
+  ],
+  "lets_discuss": "Mari Berdiskusi",
+  "hero_title": "Diskusikan Bersama Kami.",
+  "hero_desc": "Berdedikasi untuk membantu kesuksesan bisnis anda di dunia digital.",
+  "hero_title_2": "Kami memiliki pengalaman dan keahlian untuk membantu anda membuat produk.",
+  "hero_desc_2": "Dengan mengambil pendekatan kolaboratif untuk membantu mencapai tujuan bisnis anda sesuai target.",
+  "vision_section": "Visi & Nilai",
+  "vision_title": "Menjadi agen pemasaran digital yang paling “inovatif“ dan berorientasi pada hasil.",
+  "vision_desc": "Sehingga memberikan layanan luar biasa kepada klien kami, menciptakan hubungan yang bermakna dengan audiens mereka, dan berkontribusi pada pertumbuhan dan kesuksesan mereka.",
+  "service_section": "Layanan Kami",
+  "service_desc": "Beberapa layanan yang dapat membantu kebutuhan anda.",
+  "services": [
+    {
+      "title": "Profil Perusahaan",
+      "description": "Dengan memiliki website company profile membantu perusahaan membangun identitas merek yang kuat yang mencerminkan proposisi nilai yang unik dan menarik bagi audiens targetnya.",
+      "image": "/assets/images/service-1.png"
+    },
+    {
+      "title": "Desain UI/UX",
+      "description": "Membuat desain UI/UX yang baik sangat penting untuk kesuksesan suatu produk.",
+      "image": "/assets/images/service-2.png"
+    }
+  ],
+  "benefit_title": "Pilihan yang tepat untuk meningkatkan digital produk kamu.",
+  "benefit_desc": "Ketepatan waktu <0/> Efektif <0/> Empati <0/> Profesional",
+  "flow_process_title": "Proses Pengerjaan",
+  "flow_process_steps": [
+    {
+      "title": "Pengarahan",
+      "description": "Klien memberi agensi penjelasan singkat tentang harapan mereka untuk proyek tersebut.",
+      "image": "/assets/images/process-1.png"
+    },
+    {
+      "title": "Negosiasi",
+      "description": "Klien dan agensi menegosiasikan rincian proposal, termasuk ruang lingkup pekerjaan, anggaran, dan jadwal.",
+      "image": "/assets/images/process-2.png"
+    },
+    {
+      "title": "Kontrak",
+      "description": "Klien dan agensi menandatangani kontrak yang meresmikan kesepakatan.",
+      "image": "/assets/images/process-3.png"
+    },
+    {
+      "title": "Penemuan",
+      "description": "Agensi melakukan penelitian dan analisis untuk mendapatkan pemahaman yang lebih dalam tentang proyek dan bisnis klien.",
+      "image": "/assets/images/process-4.png"
+    },
+    {
+      "title": "Strategi",
+      "description": "Agensi mengembangkan strategi untuk proyek yang menguraikan pendekatan, taktik, dan tujuan.",
+      "image": "/assets/images/process-5.png"
+    },
+    {
+      "title": "Desain & Pengembangan",
+      "description": "Memulai fase desain dan pengembangan, menciptakan produk atau layanan sebagaimana diuraikan dalam strategi.",
+      "image": "/assets/images/process-6.png"
+    },
+    {
+      "title": "Pengujian",
+      "description": "Menguji produk atau layanan untuk memastikannya memenuhi standar dan persyaratan kualitas.",
+      "image": "/assets/images/process-7.png"
+    },
+    {
+      "title": "Peluncuran",
+      "description": "Produk atau layanan diluncurkan ke publik atau ke pelanggan klien.",
+      "image": "/assets/images/process-8.png"
+    },
+    {
+      "title": "Pemeliharaan",
+      "description": "Memberikan pemeliharaan berkelanjutan untuk memastikan bahwa produk atau layanan terus berfungsi secara efektif.",
+      "image": "/assets/images/process-9.png"
+    }
+  ],
+  "discuss_title": "Diskusikan kebutuhanmu bersama kami",
+  "discuss_now": "Diskusi Sekarang",
+  "contact_us_title": "Hubungi Kami",
+  "contact_us_desc": "Silahkan lengkapi form dibawah ini untuk segera berdiskusi bersama kami.",
+  "social_media": "Media Sosial",
+  "form_name_placeholder": "Nama Lengkap",
+  "form_email_placeholder": "Email",
+  "form_project_placeholder": "Pilih Projek",
+  "form_project_desc_placeholder": "Deskripsi Projek",
+  "projects": ["Profil Perusahaan", "Desain UI/UX"],
+  "form_contact_button": "Kirim",
+  "success_form_title": "Pesan Terkirim",
+  "success_form_desc": "Permintaan project yang anda buat telah terkirim."
 }

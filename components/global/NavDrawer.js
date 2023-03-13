@@ -1,21 +1,8 @@
 import Button from 'components/global/Button';
 import Image from 'next/image';
 import React from 'react';
-
-const navigations = [
-  {
-    link: '#home',
-    text: 'Beranda'
-  },
-  {
-    link: '#about-us',
-    text: 'Tentang kami'
-  },
-  {
-    link: '#services',
-    text: 'Layanan'
-  }
-];
+import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 const TextNav = ({ children, link }) => {
   return (
@@ -36,6 +23,7 @@ const getStyleContainer = (isFooter) => {
 };
 
 export default function NavDrawer({ isFooter = false }) {
+  const { t } = useTranslation();
   const TemplateElement = isFooter ? 'footer' : 'header';
 
   return (
@@ -50,7 +38,7 @@ export default function NavDrawer({ isFooter = false }) {
         />
         <nav>
           <ul className="flex items-center justify-center gap-16">
-            {navigations.map((navigation) => (
+            {t('navigations', { returnObjects: true }).map((navigation) => (
               <TextNav key={navigation.link} link={navigation.link}>
                 {navigation.text}
               </TextNav>
@@ -59,12 +47,15 @@ export default function NavDrawer({ isFooter = false }) {
         </nav>
         {isFooter ? (
           <h2 className="text-base font-medium leading-6 text-black-primary">
-            &#169; 2023 Listhink Studio
+            &#169; {new Date().getFullYear()} Listhink Studio
           </h2>
         ) : (
-          <Button href="#contact-us" style="text-base leading-6">
-            Mari Berdiskusi
-          </Button>
+          <div className="flex gap-6 items-center">
+            <LanguageSwitcher />
+            <Button href="#contact-us" style="text-base leading-6">
+              {t('lets_discuss')}
+            </Button>
+          </div>
         )}
       </div>
     </TemplateElement>

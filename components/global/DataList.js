@@ -10,7 +10,7 @@ export const Options = ({ children, onClick }) => {
   );
 };
 
-export const DataList = ({ children, value, isError }) => {
+export const DataList = ({ children, placeholder, value, isError }) => {
   const [isOpenOption, setIsOpenOption] = useState(false);
 
   return (
@@ -20,7 +20,7 @@ export const DataList = ({ children, value, isError }) => {
           className={`text-base leading-6 ${
             value ? 'text-black-primary' : 'text-netral'
           } pb-4 border-b-2 border-b-netral ${isError ? '!border-b-danger' : ''}`}>
-          {value || 'Pilih Projek'}
+          {value || placeholder}
         </h3>
         <Image
           src={Arrow}
@@ -35,7 +35,7 @@ export const DataList = ({ children, value, isError }) => {
           <div onClick={() => setIsOpenOption(false)} className="fixed inset-0 z-[99]" />
           <div
             onClick={() => setIsOpenOption(false)}
-            className="absolute z-[99] -bottom-20 left-0 right-0 bg-white-primary rounded-lg shadow-option">
+            className="absolute z-[99] -bottom-20 left-0 right-0 bg-white-primary rounded-lg shadow-option overflow-hidden">
             {children}
           </div>
         </>

@@ -5,61 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Scrollbar } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-const processData = [
-  {
-    title: 'Pengarahan',
-    description:
-      'Klien memberi agensi penjelasan singkat tentang harapan mereka untuk proyek tersebut.',
-    image: '/assets/images/process-1.png'
-  },
-  {
-    title: 'Negosiasi',
-    description:
-      'Klien dan agensi menegosiasikan rincian proposal, termasuk ruang lingkup pekerjaan, anggaran, dan jadwal.',
-    image: '/assets/images/process-2.png'
-  },
-  {
-    title: 'Kontrak',
-    description: 'Klien dan agensi menandatangani kontrak yang meresmikan kesepakatan.',
-    image: '/assets/images/process-3.png'
-  },
-  {
-    title: 'Penemuan',
-    description:
-      'Agensi melakukan penelitian dan analisis untuk mendapatkan pemahaman yang lebih dalam tentang proyek dan bisnis klien.',
-    image: '/assets/images/process-4.png'
-  },
-  {
-    title: 'Strategi',
-    description:
-      'Agensi mengembangkan strategi untuk proyek yang menguraikan pendekatan, taktik, dan tujuan.',
-    image: '/assets/images/process-5.png'
-  },
-  {
-    title: 'Desain & Pengembangan',
-    description:
-      'Memulai fase desain dan pengembangan, menciptakan produk atau layanan sebagaimana diuraikan dalam strategi',
-    image: '/assets/images/process-6.png'
-  },
-  {
-    title: 'Pengujian',
-    description:
-      'Menguji produk atau layanan untuk memastikannya memenuhi standar dan persyaratan kualitas.',
-    image: '/assets/images/process-7.png'
-  },
-  {
-    title: 'Peluncuran',
-    description: 'Produk atau layanan diluncurkan ke publik atau ke pelanggan klien.',
-    image: '/assets/images/process-8.png'
-  },
-  {
-    title: 'Pemeliharaan',
-    description:
-      'Memberikan pemeliharaan berkelanjutan untuk memastikan bahwa produk atau layanan terus berfungsi secara efektif.',
-    image: '/assets/images/process-9.png'
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 const getPaddingSide = (ref) => {
   if (typeof window === 'undefined') return 4;
@@ -114,6 +60,7 @@ export default function FlowProcess() {
   const [swiper, setSwiper] = useState();
   const [styleSwiper, setStyleSwiper] = useState({});
   const ref = useRef();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleResize = () => setStyleSwiper(getStylesCarosel(ref.current));
@@ -128,7 +75,7 @@ export default function FlowProcess() {
     <div className="mt-[140px] relative">
       <div ref={ref} className="max-w-7xl px-3 mx-auto flex justify-between items-center">
         <h1 className="font-inter font-semibold text-[40px] leading-[48px] text-black-primary">
-          Proses Pengerjaan
+          {t('flow_process_title')}
         </h1>
         <div className="flex justify-between items-center gap-7">
           <ButtonCarousel onClick={() => swiper.slideTo(swiper.activeIndex - 3)} />
@@ -146,7 +93,7 @@ export default function FlowProcess() {
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
           style={styleSwiper}>
-          {processData.map((process, i) => (
+          {t('flow_process_steps', { returnObjects: true }).map((process, i) => (
             <SwiperSlide key={i}>
               <CardProcess {...process} number={`0${i + 1}`} />
             </SwiperSlide>

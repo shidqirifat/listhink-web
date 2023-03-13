@@ -3,15 +3,16 @@ import { DataList, Options } from 'components/global/DataList';
 import Input from 'components/global/Input';
 import useForm from 'hooks/useForm';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import PopUpSuccessForm from './PopUpSuccessForm';
 
-const PROJECTS = ['Company Profile', 'UI/UX Design'];
 const FORM = ['name', 'email', 'project', 'description'];
 
 export default function FormContact() {
   const { form, error, resetForm, handleChangeInput, handleChangeOption, validateError } =
     useForm(FORM);
   const [isSuccess, setIsSuccess] = useState(false);
+  const { t } = useTranslation();
 
   const displaySuccessMessage = () => {
     setIsSuccess(true);
@@ -50,17 +51,20 @@ export default function FormContact() {
           value={form.name}
           onChange={handleChangeInput}
           isError={error.name}
-          placeholder="Nama Lengkap"
+          placeholder={t('form_name_placeholder')}
         />
         <Input
           name="email"
           value={form.email}
           onChange={handleChangeInput}
           isError={error.email}
-          placeholder="Email"
+          placeholder={t('form_email_placeholder')}
         />
-        <DataList value={form.project} isError={error.project}>
-          {PROJECTS.map((project) => (
+        <DataList
+          placeholder={t('form_project_placeholder')}
+          value={form.project}
+          isError={error.project}>
+          {t('projects', { returnObjects: true }).map((project) => (
             <Options
               key={project}
               onClick={() => handleChangeOption({ field: 'project', value: project })}>
@@ -73,10 +77,10 @@ export default function FormContact() {
           value={form.description}
           onChange={handleChangeInput}
           isError={error.description}
-          placeholder="Deskripsi Projek"
+          placeholder={t('form_project_desc_placeholder')}
           isTextArea
         />
-        <Button style="text-xl leading-7 w-full mt-9">Kirim</Button>
+        <Button style="text-xl leading-7 w-full mt-9">{t('form_contact_button')}</Button>
       </form>
     </>
   );

@@ -1,19 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-
-const services = [
-  {
-    title: 'Company Profile',
-    description:
-      'Dengan memiliki website company profile membantu perusahaan membangun identitas merek yang kuat yang mencerminkan proposisi nilai yang unik dan menarik bagi audiens targetnya.',
-    image: '/assets/images/service-1.png'
-  },
-  {
-    title: 'UI/UX Design',
-    description: 'Membuat desain UI/UX yang baik sangat penting untuk kesuksesan suatu produk.',
-    image: '/assets/images/service-2.png'
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 const CardService = ({ title, description, image, i }) => {
   return (
@@ -38,21 +25,22 @@ const CardService = ({ title, description, image, i }) => {
 };
 
 export default function Services() {
+  const { t } = useTranslation();
   return (
     <div id="services" className="max-w-7xl px-3 mx-auto pt-[120px]">
       <div className="flex justify-between items-center pt-4 px-8 pb-8 gap-14 bg-grey-primary rounded-tl-[32px] rounded-br-[32px]">
         <h1 className="text-green-primary font-semibold text-8xl leading-[100px] w-10/12 font-inter">
-          Layanan Kami
+          {t('service_section')}
         </h1>
         <div>
           <h4 className="font-semibold text-2xl leading-8 text-black-primary">
-            Beberapa layanan yang dapat membantu kebutuhan anda.
+            {t('service_desc')}
           </h4>
           <hr className="w-64 border border-green-primary mt-6" />
         </div>
       </div>
       <div className="mt-[60px] flex flex-col gap-[60px]">
-        {services.map((service, i) => (
+        {t('services', { returnObjects: true }).map((service, i) => (
           <CardService key={i} {...service} i={i} />
         ))}
       </div>

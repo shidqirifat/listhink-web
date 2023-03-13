@@ -1,3 +1,102 @@
 {
-  "hello": "Hello"
+  "title_page": "UI Design and Web Development",
+  "navigations": [
+    {
+      "link": "#home",
+      "text": "Home"
+    },
+    {
+      "link": "#about-us",
+      "text": "About Us"
+    },
+    {
+      "link": "#services",
+      "text": "Service"
+    }
+  ],
+  "lets_discuss": "Let's Discuss",
+  "hero_title": "Discuss With Us",
+  "hero_desc": "Dedicated to helping your business succeed in the digital world.",
+  "hero_title_2": "We have the experience and expertise to help you create a product.",
+  "hero_desc_2": "By taking a collaborative approach to help achieve your business goals on target.",
+  "vision_section": "Vision & Value",
+  "vision_title": "To be the most “innovative” and result-oriented digital marketing agency.",
+  "vision_desc": "Thus providing exceptional service to our clients, creating meaningful relationships with their audiences, and contributing to their growth and success.",
+  "service_section": "Our Service",
+  "service_desc": "Some services that can help your needs.",
+  "services": [
+    {
+      "title": "Company Profile",
+      "description": "Having a company profile website helps a company build a strong brand identity that reflects a unique and attractive value proposition to its target audience.",
+      "image": "/assets/images/service-1.png"
+    },
+    {
+      "title": "UI/UX Design",
+      "description": "Creating a good UI/UX design is very important for the success of a product.",
+      "image": "/assets/images/service-2.png"
+    }
+  ],
+  "benefit_title": "The right choice to enhance your digital product.",
+  "benefit_desc": "Timely <0/> Effective <0/> Empathic <0/> Professional",
+  "flow_process_title": "Flow Process",
+  "flow_process_steps": [
+    {
+      "title": "Briefing",
+      "description": "The client gave the agency a brief description of their expectations for the project.",
+      "image": "/assets/images/process-1.png"
+    },
+    {
+      "title": "Negotiation",
+      "description": "The client and agency negotiate the details of the proposal, including scope of work, budget and schedule.",
+      "image": "/assets/images/process-2.png"
+    },
+    {
+      "title": "Contract",
+      "description": "The client and agency sign a contract formalizing the deal.",
+      "image": "/assets/images/process-3.png"
+    },
+    {
+      "title": "Meet",
+      "description": "The agency conducts research and analysis to gain a deeper understanding of the client's project and business.",
+      "image": "/assets/images/process-4.png"
+    },
+    {
+      "title": "Strategy",
+      "description": "The agency develops a strategy for the project that outlines the approach, tactics and goals.",
+      "image": "/assets/images/process-5.png"
+    },
+    {
+      "title": "Design & Development",
+      "description": "Initiating the design and development phase, creating the product or service as outlined in the strategy.",
+      "image": "/assets/images/process-6.png"
+    },
+    {
+      "title": "Testing",
+      "description": "Testing products or services to ensure they meet quality standards and requirements.",
+      "image": "/assets/images/process-7.png"
+    },
+    {
+      "title": "Launching",
+      "description": "Products or services are launched to the public or to client customers.",
+      "image": "/assets/images/process-8.png"
+    },
+    {
+      "title": "Maintenance",
+      "description": "Provide ongoing maintenance to ensure that the product or service continues to function effectively.",
+      "image": "/assets/images/process-9.png"
+    }
+  ],
+  "discuss_title": "Discuss your needs with us",
+  "discuss_now": "Discuss Now",
+  "contact_us_title": "Contact us",
+  "contact_us_desc": "Please complete the form below to discuss with us soon.",
+  "social_media": "Social Media",
+  "form_name_placeholder": "Full Name",
+  "form_email_placeholder": "Email",
+  "form_project_placeholder": "Choose Project",
+  "form_project_desc_placeholder": "Project Description",
+  "projects": ["Company Profile", "UI/UX Design"],
+  "form_contact_button": "Send",
+  "success_form_title": "Message Sent",
+  "success_form_desc": "The project request you made has been sent."
 }
