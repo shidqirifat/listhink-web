@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <div id="home" className="max-w-7xl px-3 pt-44 mx-auto">
       <div className="flex justify-between">
-        <h1 className="text-black-primary font-semibold text-8xl w-8/12 leading-[110px] font-inter pr-20">
+        <h1 className="text-black-primary font-semibold text-8xl w-8/12 leading-[110px] font-inter pr-24">
           {t('hero_title')}
         </h1>
         <div className="w-4/12 mt-9 relative">

@@ -38,7 +38,7 @@ export const LanguageSwitcher = () => {
 
   const handleChangeLanguage = (lang) => {
     i18n.changeLanguage(lang);
-    router.push(router.asPath, undefined, { locale: lang });
+    router.push(router.asPath, undefined, { locale: lang, scroll: false });
   };
 
   return (
