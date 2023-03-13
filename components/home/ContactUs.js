@@ -17,7 +17,7 @@ export default function ContactUs() {
           Diskusi Sekarang
         </Button>
       </div>
-      <div id="contact-us" className="mt-36 grid grid-cols-[auto_510px] gap-24">
+      <div id="contact-us" className="pt-36 grid grid-cols-[auto_510px] gap-24">
         <div>
           <h1 className="font-semibold text-[80px] leading-[96px] text-black-primary font-inter">
             Hubungi Kami
