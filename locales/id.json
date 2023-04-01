@@ -15,6 +15,7 @@
     }
   ],
   "lets_discuss": "Mari Berdiskusi",
+  "about_us_section": "Tentang Kami",
   "hero_title": "Diskusikan Bersama Kami.",
   "hero_desc": "Berdedikasi untuk membantu kesuksesan bisnis anda di dunia digital.",
   "hero_title_2": "Kami memiliki pengalaman dan keahlian untuk membantu anda membuat produk.",
@@ -36,8 +37,7 @@
       "image": "/assets/images/service-2.png"
     }
   ],
-  "benefit_title": "Pilihan yang tepat untuk meningkatkan digital produk kamu.",
-  "benefit_desc": "Ketepatan waktu <0/> Efektif <0/> Empati <0/> Profesional",
+  "why_us_title": "Kenapa pilih kami?",
   "flow_process_title": "Proses Pengerjaan",
   "flow_process_steps": [
     {

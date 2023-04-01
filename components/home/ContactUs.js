@@ -11,13 +11,18 @@ export default function ContactUs() {
   const { t } = useTranslation();
   return (
     <div className="max-w-7xl px-3 mx-auto mt-[92px] pb-32 relative">
-      <div className="py-24 px-7 bg-yellow-primary rounded-[80px] text-center">
-        <h1 className="font-inter font-semibold text-[80px] leading-[96px] text-black-primary mb-[60px]">
-          {t('discuss_title')}
-        </h1>
-        <Button href="#contact-us" style="text-xl leading-7">
-          {t('discuss_now')}
-        </Button>
+      <div className="py-11 px-16 bg-yellow-primary rounded-[80px]">
+        <div className="w-[270px] h-[315px] absolute -top-16">
+          <Image src="/assets/images/discuss.png" alt="Discussion" fill />
+        </div>
+        <div className="ml-[40%]">
+          <h1 className="font-inter font-semibold text-[48px] leading-[58px] text-black-primary mb-[42px]">
+            {t('discuss_title')}
+          </h1>
+          <Button href="#contact-us" style="text-xl leading-7 px-5 py-4">
+            {t('discuss_now')}
+          </Button>
+        </div>
       </div>
       <div id="contact-us" className="pt-36 grid grid-cols-[auto_510px] gap-24">
         <div>

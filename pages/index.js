@@ -1,8 +1,9 @@
 import React from 'react';
 import Hero from 'components/home/Hero';
+import AboutUs from 'components/home/AboutUs';
 import Vision from 'components/home/Vision';
 import Services from 'components/home/Services';
-import Benefit from 'components/home/Benefit';
+import WhyUs from 'components/home/WhyUs';
 import FlowProcess from 'components/home/FlowProcess';
 import ContactUs from 'components/home/ContactUs';
 import Wrapper from 'components/global/Wrapper';
@@ -13,9 +14,10 @@ export default function Home() {
   return (
     <Wrapper title={t('title_page')}>
       <Hero />
+      <AboutUs />
       <Vision />
       <Services />
-      <Benefit />
+      <WhyUs />
       <FlowProcess />
       <ContactUs />
     </Wrapper>

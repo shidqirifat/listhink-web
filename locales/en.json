@@ -15,6 +15,7 @@
     }
   ],
   "lets_discuss": "Let's Discuss",
+  "about_us_section": "About Us",
   "hero_title": "Discuss With Us",
   "hero_desc": "Dedicated to helping your business succeed in the digital world.",
   "hero_title_2": "We have the experience and expertise to help you create a product.",
@@ -36,8 +37,7 @@
       "image": "/assets/images/service-2.png"
     }
   ],
-  "benefit_title": "The right choice to enhance your digital product.",
-  "benefit_desc": "Timely <0/> Effective <0/> Empathic <0/> Professional",
+  "why_us_title": "Why choose us?",
   "flow_process_title": "Flow Process",
   "flow_process_steps": [
     {
