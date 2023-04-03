@@ -38,6 +38,21 @@
     }
   ],
   "why_us_title": "Why choose us?",
+  "why_us_reasons": ["Ontime", "Effective", "Empathize", "Proffessional"],
+  "why_us_reason_cards": [
+    {
+      "title": "The right agency to improve your digital product because on time."
+    },
+    {
+      "title": "The right agency to improve your digital product because effective."
+    },
+    {
+      "title": "The right agency to improve your digital product because empathize."
+    },
+    {
+      "title": "The right agency to improve your digital product because proffessional."
+    }
+  ],
   "flow_process_title": "Flow Process",
   "flow_process_steps": [
     {

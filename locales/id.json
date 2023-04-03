@@ -38,6 +38,21 @@
     }
   ],
   "why_us_title": "Kenapa pilih kami?",
+  "why_us_reasons": ["Ketepatan waktu", "Efektif", "Empati", "Profesional"],
+  "why_us_reason_cards": [
+    {
+      "title": "Agency yang tepat untuk meningkatkan digital produk anda karena tepat waktu."
+    },
+    {
+      "title": "Agency yang tepat karena efektif."
+    },
+    {
+      "title": "Agency yang tepat karena empati."
+    },
+    {
+      "title": "Agency yang tepat untuk meningkatkan digital produk anda karena professional."
+    }
+  ],
   "flow_process_title": "Proses Pengerjaan",
   "flow_process_steps": [
     {
