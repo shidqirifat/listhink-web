@@ -47,7 +47,7 @@ export default function WhyUs() {
         <div className="mt-11 grid grid-cols-2 gap-20">
           <div className="inline">
             {t('why_us_reasons', { returnObjects: true }).map((reason, i) => (
-              <Reason key={i} isActive={swiperIndex === i} onClick={() => swiper.slideTo(i)}>
+              <Reason key={i} isActive={swiperIndex === i} onClick={() => swiper.slideToLoop(i)}>
                 {reason}
               </Reason>
             ))}
