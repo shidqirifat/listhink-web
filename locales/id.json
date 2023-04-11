@@ -41,16 +41,20 @@
   "why_us_reasons": ["Ketepatan waktu", "Efektif", "Empati", "Profesional"],
   "why_us_reason_cards": [
     {
-      "title": "Agency yang tepat untuk meningkatkan digital produk anda karena tepat waktu."
+      "title": "Tepat waktu dalam menyelesaikan project.",
+      "icon": "time"
     },
     {
-      "title": "Agency yang tepat karena efektif."
+      "title": "Membantu menyelesaikan berbagai masalah secara efektif.",
+      "icon": "navigation"
     },
     {
-      "title": "Agency yang tepat karena empati."
+      "title": "Berkemampuan baik dalam memahami  kebutuhan customer.",
+      "icon": "ok-finger"
     },
     {
-      "title": "Agency yang tepat untuk meningkatkan digital produk anda karena professional."
+      "title": "Memiliki tenaga ahli yang berkemampuan dalam bidangnya.",
+      "icon": "professional"
     }
   ],
   "flow_process_title": "Proses Pengerjaan",

@@ -44,10 +44,13 @@ const CardProcess = ({ number, title, description, image }) => {
     <div className="rounded-[40px] border border-gray-primary shadow-lg overflow-hidden h-full">
       <div className="w-full h-[192px] relative">
         <Image src={image} alt={title} fill />
+        <div className="absolute inset-0 gradient-card-process" />
+        <h2 className="font-medium text-[80px] leading-[90px] text-white-primary font-inter absolute bottom-0 right-5">
+          {number}
+        </h2>
       </div>
       <div className="pt-[6px] pl-8 pr-6 pb-6">
-        <h2 className="font-medium text-3xl leading-10 text-gray-primary">{number}</h2>
-        <div className="rounded-lg py-1 px-[10px] bg-yellow-primary w-max mb-5 mt-[2px]">
+        <div className="rounded-lg py-1 px-[10px] bg-yellow-primary w-max mb-5 mt-8">
           <h1 className="text-2xl leading-9 font-medium text-black-primary">{title}</h1>
         </div>
         <h3 className="text-xl leading-7 font-medium text-black-primary">{description}</h3>

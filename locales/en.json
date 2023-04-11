@@ -41,16 +41,20 @@
   "why_us_reasons": ["Ontime", "Effective", "Empathize", "Proffessional"],
   "why_us_reason_cards": [
     {
-      "title": "The right agency to improve your digital product because on time."
+      "title": "On time in completing the project.",
+      "icon": "time"
     },
     {
-      "title": "The right agency to improve your digital product because effective."
+      "title": "Help solve various problems effectively.",
+      "icon": "navigation"
     },
     {
-      "title": "The right agency to improve your digital product because empathize."
+      "title": "Good ability to understand customer needs.",
+      "icon": "ok-finger"
     },
     {
-      "title": "The right agency to improve your digital product because proffessional."
+      "title": "Have experts who are capable in their fields.",
+      "icon": "professional"
     }
   ],
   "flow_process_title": "Flow Process",

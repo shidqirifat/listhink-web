@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
-import OkFinger from 'public/assets/icons/ok-finger.svg';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
@@ -22,12 +21,10 @@ const Reason = ({ onClick, isActive, children }) => {
   );
 };
 
-const CardReason = ({ children }) => {
+const CardReason = ({ children, icon }) => {
   return (
     <div className="rounded-[40px] p-8 border-[3px] border-[#7B9684] bg-green-primary shadow-lg">
-      <div className="rounded-full p-3 border-2 border-white-primary w-[50px] h-[50px] grid place-content-center">
-        <Image src={OkFinger} alt="Ok Finger" width={25} height={25} />
-      </div>
+      <Image src={`/assets/icons/${icon}.svg`} alt={icon} width={48} height={48} />
       <h3 className="font-medium text-2xl leading-9 text-white-primary mt-4">{children}</h3>
     </div>
   );
@@ -63,7 +60,7 @@ export default function WhyUs() {
               loop={true}>
               {t('why_us_reason_cards', { returnObjects: true }).map((reason, i) => (
                 <SwiperSlide key={i * 10}>
-                  <CardReason>{reason.title}</CardReason>
+                  <CardReason icon={reason.icon}>{reason.title}</CardReason>
                 </SwiperSlide>
               ))}
             </Swiper>
