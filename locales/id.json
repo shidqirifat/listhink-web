@@ -20,9 +20,36 @@
   "hero_desc": "Berdedikasi untuk membantu kesuksesan bisnis anda di dunia digital.",
   "hero_title_2": "Kami memiliki pengalaman dan keahlian untuk membantu anda membuat produk.",
   "hero_desc_2": "Dengan mengambil pendekatan kolaboratif untuk membantu mencapai tujuan bisnis anda sesuai target.",
-  "vision_section": "Visi & Nilai",
-  "vision_title": "Menjadi agen pemasaran digital yang paling “inovatif“ dan berorientasi pada hasil.",
-  "vision_desc": "Sehingga memberikan layanan luar biasa kepada klien kami, menciptakan hubungan yang bermakna dengan audiens mereka, dan berkontribusi pada pertumbuhan dan kesuksesan mereka.",
+  "vision_section": "Visi",
+  "vision_title": "Menjadi agency yang profesional dalam menyelesaikan persoalan customer melalui teknologi.",
+  "value_section": "Nilai",
+  "values": [
+    {
+      "title": "Trust",
+      "description": "Customer mempercayakan kami untuk membuat produknya.",
+      "icon": "trust"
+    },
+    {
+      "title": "Humble",
+      "description": "Menerima pandangan lain dari customer untuk meningkatkan kualitas produk.",
+      "icon": "humble"
+    },
+    {
+      "title": "Impact",
+      "description": "Kebermanfaatan dari produk yang telah dibuat sehingga dirasakan oleh banyak orang.",
+      "icon": "impact"
+    },
+    {
+      "title": "Non-Stagnant",
+      "description": "Memiliki pola pikir untuk terus belajar dan berkembang.",
+      "icon": "non-stagnant"
+    },
+    {
+      "title": "Kind",
+      "description": "Memberikan solusi yang tepat berdasarkan permasalahan customer.",
+      "icon": "kind"
+    }
+  ],
   "service_section": "Layanan Kami",
   "service_desc": "Beberapa layanan yang dapat membantu kebutuhan anda.",
   "services": [

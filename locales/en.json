@@ -20,9 +20,36 @@
   "hero_desc": "Dedicated to helping your business succeed in the digital world.",
   "hero_title_2": "We have the experience and expertise to help you create a product.",
   "hero_desc_2": "By taking a collaborative approach to help achieve your business goals on target.",
-  "vision_section": "Vision & Value",
-  "vision_title": "To be the most “innovative” and result-oriented digital marketing agency.",
-  "vision_desc": "Thus providing exceptional service to our clients, creating meaningful relationships with their audiences, and contributing to their growth and success.",
+  "vision_section": "Vision",
+  "vision_title": "Become a professional agency in solving customer problems through technology.",
+  "value_section": "Value",
+  "values": [
+    {
+      "title": "Trust",
+      "description": "Customers trust us to make their products.",
+      "icon": "trust"
+    },
+    {
+      "title": "Humble",
+      "description": "Receive other views from customers to improve product quality.",
+      "icon": "humble"
+    },
+    {
+      "title": "Impact",
+      "description": "The benefits of the products that have been made are felt by many people.",
+      "icon": "impact"
+    },
+    {
+      "title": "Non-Stagnant",
+      "description": "Have the mindset to keep learning and growing.",
+      "icon": "non-stagnant"
+    },
+    {
+      "title": "Kind",
+      "description": "Providing the right solutions based on customer problems.",
+      "icon": "kind"
+    }
+  ],
   "service_section": "Our Service",
   "service_desc": "Some services that can help your needs.",
   "services": [
