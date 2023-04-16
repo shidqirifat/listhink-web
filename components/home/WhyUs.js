@@ -7,8 +7,10 @@ import { useTranslation } from 'react-i18next';
 const Reason = ({ onClick, isActive, children }) => {
   return (
     <button
-      className={`rounded-[32px] !border-solid !border-[3px] !border-black-primary py-[18px] transition px-9 inline-block w-max mr-6 mb-6 ${
-        isActive ? 'bg-white-primary' : 'hover:bg-white-primary/70'
+      className={`rounded-[32px] border-solid border-[3px] py-[18px] transition px-9 inline-block w-max mr-6 mb-6 ${
+        isActive
+          ? 'bg-white-primary shadow-lg border-black-primary'
+          : 'hover:bg-white-primary/70 border-black-primary/80'
       }`}
       onClick={onClick}>
       <h2
@@ -56,6 +58,7 @@ export default function WhyUs() {
               modules={[Autoplay]}
               spaceBetween={50}
               slidesPerView={1}
+              simulateTouch={false}
               autoplay={{ delay: 5000, pauseOnMouseEnter: true, disableOnInteraction: false }}
               loop={true}>
               {t('why_us_reason_cards', { returnObjects: true }).map((reason, i) => (

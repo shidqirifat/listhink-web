@@ -37,7 +37,7 @@ const CardValue = ({ title, icon, description }) => {
 export default function Vision() {
   const { t } = useTranslation();
   return (
-    <div className="mt-[110px] pb-24 pt-[72px] bg-green-secondary-hover">
+    <div className="mt-[30px] pb-24 pt-[72px] bg-green-secondary-hover">
       <div className="max-w-7xl px-3 mx-auto">
         <div className="flex gap-32">
           <Section>{t('vision_section')}</Section>
