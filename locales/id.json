@@ -143,6 +143,9 @@
   "form_project_desc_placeholder": "Deskripsi Projek",
   "projects": ["Profil Perusahaan", "Desain UI/UX"],
   "form_contact_button": "Kirim",
-  "success_form_title": "Pesan Terkirim",
-  "success_form_desc": "Permintaan project yang anda buat telah terkirim."
+  "template_message_intro": "Hi *Listhink Agency*! Saya tertarik untuk bekerja sama.",
+  "me": "Saya",
+  "project_type": "Tipe Project",
+  "project_description": "Deskripsi Project",
+  "template_message_outro": "Apakah *Listhink Agency* bisa membantu saya membuat project seperti itu?"
 }

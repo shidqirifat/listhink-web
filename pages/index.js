@@ -5,7 +5,7 @@ import Vision from 'components/home/Vision';
 import Services from 'components/home/Services';
 import WhyUs from 'components/home/WhyUs';
 import FlowProcess from 'components/home/FlowProcess';
-import ContactUs from 'components/home/ContactUs';
+import ContactUs from 'components/home/contact/ContactUs';
 import Wrapper from 'components/global/Wrapper';
 import { useTranslation } from 'react-i18next';
 

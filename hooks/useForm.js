@@ -17,12 +17,10 @@ export default function useForm(initForm) {
     }));
   };
 
-  const validateError = (field) => {
-    if (field) return setError((prev) => ({ ...prev, [field]: true }));
-
+  const validateError = (fields) => {
     const newError = {};
-    for (const input in form) {
-      newError[input] = error[input] || !form[input];
+    for (const input in fields) {
+      newError[input] = error[input] || !fields[input];
     }
 
     setError(newError);

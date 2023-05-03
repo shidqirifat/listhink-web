@@ -143,6 +143,9 @@
   "form_project_desc_placeholder": "Project Description",
   "projects": ["Company Profile", "UI/UX Design"],
   "form_contact_button": "Send",
-  "success_form_title": "Message Sent",
-  "success_form_desc": "The project request you made has been sent."
+  "template_message_intro": "Hi *Listhink Agency*! I am interested to cooperate.",
+  "me": "I am",
+  "project_type": "Project Type",
+  "project_description": "Project Description",
+  "template_message_outro": "Can *Listhink Agency* help me make a project like that?"
 }
