@@ -15,8 +15,10 @@ const generateTemplateMessage = (form, t) => {
 };
 
 const generateURLWhatsApp = (form, t) => {
-  return `${WHATS_APP_BASE_URL}/send?phone=${PHONE_NUMBER}&
-    text=${generateTemplateMessage(form, t)}`;
+  return `${WHATS_APP_BASE_URL}/send?phone=${PHONE_NUMBER}&text=${generateTemplateMessage(
+    form,
+    t
+  )}`;
 };
 
 export { FORM, validateEmptyForm, generateURLWhatsApp };
