@@ -1,8 +1,10 @@
 import Head from 'next/head';
 import React from 'react';
-import NavDrawer from './NavDrawer';
+import NavDrawer from '../drawer/NavDrawer';
+import useMediaQueries from 'hooks/useMediaQueries';
 
 export default function Wrapper({ title, children }) {
+  useMediaQueries();
   return (
     <div>
       <Head>

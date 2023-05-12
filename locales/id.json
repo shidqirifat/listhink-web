@@ -56,12 +56,14 @@
     {
       "title": "Profil Perusahaan",
       "description": "Dengan memiliki website company profile membantu perusahaan membangun identitas merek yang kuat yang mencerminkan proposisi nilai yang unik dan menarik bagi audiens targetnya.",
-      "image": "/assets/images/service-1.png"
+      "image": "/assets/images/service-1.png",
+      "image_mobile": "/assets/images/service-1-mobile.png"
     },
     {
       "title": "Desain UI/UX",
       "description": "Membuat desain UI/UX yang baik sangat penting untuk kesuksesan suatu produk.",
-      "image": "/assets/images/service-2.png"
+      "image": "/assets/images/service-2.png",
+      "image_mobile": "/assets/images/service-2-mobile.png"
     }
   ],
   "why_us_title": "Kenapa pilih kami?",

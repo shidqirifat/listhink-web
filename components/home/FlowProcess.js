@@ -6,6 +6,7 @@ import { Pagination, Scrollbar } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 
 const getPaddingSide = (ref) => {
   if (typeof window === 'undefined') return 4;
@@ -45,21 +46,26 @@ const CardProcess = ({ number, title, description, image }) => {
       <div className="w-full h-[192px] relative">
         <Image src={image} alt={title} fill />
         <div className="absolute inset-0 gradient-card-process" />
-        <h2 className="font-medium text-[80px] leading-[90px] text-white-primary font-inter absolute bottom-0 right-5">
+        <h2 className="font-medium text-[52px] md:text-[80px] leading-[76px] md:leading-[90px] text-white-primary font-inter absolute bottom-0 right-5">
           {number}
         </h2>
       </div>
-      <div className="pt-[6px] pl-8 pr-6 pb-6">
-        <div className="rounded-lg py-1 px-[10px] bg-yellow-primary w-max mb-5 mt-8">
-          <h1 className="text-2xl leading-9 font-medium text-black-primary">{title}</h1>
+      <div className="pt-[6px] pl-6 md:pl-8 pr-6 pb-8 md:pb-6">
+        <div className="rounded-lg py-1 px-[10px] bg-yellow-primary w-max mb-3 md:mb-5 mt-5 md:mt-8">
+          <h1 className="text-lg md:text-2xl leading-7 md:leading-9 font-medium text-black-primary">
+            {title}
+          </h1>
         </div>
-        <h3 className="text-xl leading-7 font-medium text-black-primary">{description}</h3>
+        <h3 className="text-base md:text-xl leading-6 md:leading-7 font-medium text-black-primary">
+          {description}
+        </h3>
       </div>
     </div>
   );
 };
 
 export default function FlowProcess() {
+  const { displaySize } = useSelector((state) => state);
   const [swiper, setSwiper] = useState();
   const [styleSwiper, setStyleSwiper] = useState({});
   const ref = useRef();
@@ -75,23 +81,29 @@ export default function FlowProcess() {
   }, []);
 
   return (
-    <div className="mt-[140px] relative">
-      <div ref={ref} className="max-w-7xl px-3 mx-auto flex justify-between items-center">
-        <h1 className="font-inter font-semibold text-[40px] leading-[48px] text-black-primary">
+    <div className="mt-10 md:mt-[140px] relative">
+      <div ref={ref} className="max-w-7xl px-6 md:px-3 mx-auto flex justify-between items-center">
+        <h1 className="font-inter font-semibold text-2xl md:text-[40px] leading-7 md:leading-[48px] text-black-primary">
           {t('flow_process_title')}
         </h1>
-        <div className="flex justify-between items-center gap-7">
-          <ButtonCarousel onClick={() => swiper.slideTo(swiper.activeIndex - 3)} />
-          <ButtonCarousel isRight onClick={() => swiper.slideTo(swiper.activeIndex + 3)} />
-        </div>
+        {!displaySize.small && (
+          <div className="flex justify-between items-center gap-7">
+            <ButtonCarousel onClick={() => swiper.slideTo(swiper.activeIndex - 3)} />
+            <ButtonCarousel isRight onClick={() => swiper.slideTo(swiper.activeIndex + 3)} />
+          </div>
+        )}
       </div>
-      <div className="flex mt-7">
+      <div className="flex mt-7 px-6 md:px-0">
         <Swiper
           key={ref.current}
           onInit={(swiper) => setSwiper(swiper)}
           modules={[Pagination, Scrollbar]}
           spaceBetween={50}
-          slidesPerView={2.8}
+          breakpoints={{
+            220: { slidesPerView: 1 },
+            780: { slidesPerView: 2 },
+            1024: { slidesPerView: 2.8 }
+          }}
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}

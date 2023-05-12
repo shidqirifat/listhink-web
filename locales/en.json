@@ -56,12 +56,14 @@
     {
       "title": "Company Profile",
       "description": "Having a company profile website helps a company build a strong brand identity that reflects a unique and attractive value proposition to its target audience.",
-      "image": "/assets/images/service-1.png"
+      "image": "/assets/images/service-1.png",
+      "image_mobile": "/assets/images/service-1-mobile.png"
     },
     {
       "title": "UI/UX Design",
       "description": "Creating a good UI/UX design is very important for the success of a product.",
-      "image": "/assets/images/service-2.png"
+      "image": "/assets/images/service-2.png",
+      "image_mobile": "/assets/images/service-2-mobile.png"
     }
   ],
   "why_us_title": "Why choose us?",
