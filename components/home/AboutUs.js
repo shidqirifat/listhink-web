@@ -6,8 +6,8 @@ import Image from 'next/image';
 export default function AboutUs() {
   const { t } = useTranslation();
   return (
-    <div className="max-w-7xl px-6 md:px-3 -mt-4 md:-mt-12 mx-auto">
-      <div id="about-us" className="pt-16 md:pt-28 relative">
+    <div className="max-w-7xl px-6 md:px-3 -mt-12 md:-mt-12 mx-auto">
+      <div id="about-us" className="pt-24 md:pt-28 relative">
         <h2 className="font-semibold text-xl md:text-2xl leading-7 md:leading-9 text-green-primary tracking-wide">
           {t('about_us_section')}
         </h2>

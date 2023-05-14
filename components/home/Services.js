@@ -35,7 +35,9 @@ const CardService = ({ title, description, image, image_mobile, number }) => {
 export default function Services() {
   const { t } = useTranslation();
   return (
-    <div id="services" className="max-w-7xl px-6 md:px-3 mx-auto pt-10 md:pt-[120px]">
+    <div
+      id="services"
+      className="max-w-7xl px-6 md:px-3 mx-auto -mt-10 md:mt-0 pt-20 md:pt-[120px]">
       <div className="flex justify-between md:items-center flex-col md:flex-row gap-6 md:gap-14">
         <h1
           className="text-green-primary font-semibold text-[40px] md:text-8xl

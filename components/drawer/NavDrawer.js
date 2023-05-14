@@ -1,10 +1,8 @@
-import Image from 'next/image';
 import React, { useMemo } from 'react';
-import Listhink from 'public/assets/logos/logo-listhink.svg';
-import Hamburger from 'public/assets/icons/hamburger.svg';
 import { useSelector } from 'react-redux';
 import DrawerDesktop from './DrawerDesktop';
 import OrganizedBy from './OrganizedBy';
+import DrawerMobile from './DrawerMobile';
 
 const getStyleContainer = (isFooter) => {
   if (isFooter) return 'border-t';
@@ -37,10 +35,7 @@ export default function NavDrawer({ isFooter = false }) {
             <OrganizedBy />
           </div>
         ) : (
-          <div className="py-4 px-6 flex justify-between items-center">
-            <Image src={Listhink} alt="Logo Listhink Studio" width={26} height={42} />
-            <Image src={Hamburger} alt="Hamburger Button" width={32} height={32} />
-          </div>
+          <DrawerMobile />
         )}
       </WrapperDrawer>
     );
