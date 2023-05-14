@@ -3,8 +3,8 @@ import Arrow from 'public/assets/icons/arrow-option.svg';
 import FlagID from 'public/assets/logos/flag-id.svg';
 import FlagUS from 'public/assets/logos/flag-us.svg';
 import i18n from 'config/i18n';
-import { useState } from 'react';
 import { useRouter } from 'next/router';
+import useToggle from 'hooks/useToggle';
 
 const LANGUAGES = [
   {
@@ -33,7 +33,7 @@ const Options = ({ onClick, flag, children, isChecked }) => {
 };
 
 export const LanguageSwitcher = () => {
-  const [isOpenOption, setIsOpenOption] = useState(false);
+  const { isPopUp, onToggle } = useToggle();
   const router = useRouter();
 
   const handleChangeLanguage = (lang) => {
@@ -43,9 +43,7 @@ export const LanguageSwitcher = () => {
 
   return (
     <div className="relative">
-      <div
-        onClick={() => setIsOpenOption(true)}
-        className="cursor-pointer p-2 flex gap-2 items-center">
+      <div onClick={onToggle} className="cursor-pointer p-2 flex gap-2 items-center">
         <Image
           src={i18n.language === 'id' ? FlagID : FlagUS}
           alt={`Flag ${i18n.language === 'id' ? 'Indonesia' : 'United Kingdom'}`}
@@ -54,11 +52,11 @@ export const LanguageSwitcher = () => {
         />
         <Image src={Arrow} alt="Arrow Option" width={14} height={8} />
       </div>
-      {isOpenOption && (
+      {isPopUp && (
         <>
-          <div onClick={() => setIsOpenOption(false)} className="fixed inset-0 z-[99]" />
+          <div onClick={onToggle} className="fixed inset-0 z-[99]" />
           <div
-            onClick={() => setIsOpenOption(false)}
+            onClick={onToggle}
             className="absolute z-[99] -bottom-[88px] -left-1 border border-gray-primary/30 bg-white-primary rounded-[4px] shadow-md w-[72px] overflow-hidden">
             {LANGUAGES.map((lang) => (
               <Options

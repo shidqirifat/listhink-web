@@ -14,8 +14,8 @@ const PopUpDrawer = ({ onToggle, isActive }) => {
   return (
     <div
       className={`fixed inset-0 bg-white-primary py-10 px-6 flex flex-col gap-10 ${
-        isActive ? 'top-0 opacity-100 z-10' : '-top-20 opacity-0 -z-10'
-      } transition-all duration-100`}>
+        isActive ? 'top-0 opacity-100 z-10' : '-top-20 opacity-0 invisible -z-10'
+      } transition-all`}>
       <button
         onClick={onToggle}
         className="h-8 w-8 grid place-content-center absolute top-10 right-6">
