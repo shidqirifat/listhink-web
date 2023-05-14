@@ -7,6 +7,7 @@ import WhyUs from 'components/home/WhyUs';
 import FlowProcess from 'components/home/FlowProcess';
 import Wrapper from 'components/global/Wrapper';
 import { useTranslation } from 'react-i18next';
+import ContactUs from 'components/home/contact/ContactUs';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -18,7 +19,7 @@ export default function Home() {
       <Services />
       <WhyUs />
       <FlowProcess />
-      {/* <ContactUs /> */}
+      <ContactUs />
     </Wrapper>
   );
 }

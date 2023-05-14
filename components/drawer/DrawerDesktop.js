@@ -4,15 +4,17 @@ import ListhinkFull from 'public/assets/logos/listhink-studio.svg';
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from 'components/global/LanguageSwitcher';
 import Button from 'components/global/Button';
+import Link from 'next/link';
+import OrganizedBy from './OrganizedBy';
 
 const TextNav = ({ children, link }) => {
   return (
     <li>
-      <a href={link}>
+      <Link href={link} scroll={false}>
         <h2 className="font-medium text-base leading-6 text-black-primary capitalize">
           {children}
         </h2>
-      </a>
+      </Link>
     </li>
   );
 };
@@ -32,9 +34,7 @@ export default function DrawerDesktop({ isFooter }) {
         </ul>
       </nav>
       {isFooter ? (
-        <h2 className="text-base font-medium leading-6 text-black-primary">
-          &#169; {new Date().getFullYear()} Listhink Studio
-        </h2>
+        <OrganizedBy />
       ) : (
         <div className="flex gap-6 items-center">
           <LanguageSwitcher />

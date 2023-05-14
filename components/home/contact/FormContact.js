@@ -50,7 +50,7 @@ export default function FormContact() {
         placeholder={t('form_project_desc_placeholder')}
         isTextArea
       />
-      <Button style="text-xl leading-7 w-full mt-9">{t('form_contact_button')}</Button>
+      <Button style="text-xl leading-7 w-full mt-8 md:mt-9">{t('form_contact_button')}</Button>
     </form>
   );
 }
