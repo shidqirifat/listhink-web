@@ -33,7 +33,7 @@ export default function Hero() {
           </Link>
         </div>
       </div>
-      <div className="mt-20 md:mt-24 relative w-full h-[375px]">
+      <div className="mt-20 md:mt-24 relative aspect-[9/10] sm:aspect-[10/3]">
         <Image
           src={`/assets/images/${displaySize.small ? 'hero-mobile' : 'hero'}.png`}
           alt="Hero Image"
