@@ -18,7 +18,7 @@ const getStylesCarosel = (ref) => {
   if (!ref) return null;
 
   return {
-    paddingBottom: '50px',
+    paddingBottom: '70px',
     paddingLeft: getPaddingSide(ref),
     paddingRight: getPaddingSide(ref)
   };
@@ -105,7 +105,11 @@ export default function FlowProcess() {
             1024: { slidesPerView: 2.8 }
           }}
           navigation
-          pagination={{ clickable: true }}
+          pagination={{
+            clickable: true,
+            bulletClass: 'bg-green-secondary w-4 h-4 rounded-full inline-block mx-2 cursor-pointer',
+            bulletActiveClass: '!bg-green-primary'
+          }}
           scrollbar={{ draggable: true }}
           style={styleSwiper}>
           {t('flow_process_steps', { returnObjects: true }).map((process, i) => (
