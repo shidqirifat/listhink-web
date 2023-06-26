@@ -17,6 +17,7 @@ export default function Hero() {
           className="text-black-primary font-semibold text-[40px] md:text-8xl md:w-8/12 
         leading-[48px] md:leading-[110px] font-inter mb-2 md:mb-0 md:pr-24">
           {t('hero_title')}
+          {/* wkwkwk */}
         </h1>
         <div className="md:w-4/12 md:mt-9 relative">
           <h2 className="text-black-primary font-medium text-base md:text-2xl leading-6 md:leading-9 pr-24 md:pr-0">

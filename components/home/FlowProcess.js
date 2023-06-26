@@ -14,13 +14,13 @@ const getPaddingSide = (ref) => {
   return (window.innerWidth - ref.offsetWidth) / 2;
 };
 
-const getStylesCarosel = (ref) => {
+const getStylesCarosel = (ref, isMobile) => {
   if (!ref) return null;
 
   return {
     paddingBottom: '70px',
-    paddingLeft: getPaddingSide(ref),
-    paddingRight: getPaddingSide(ref)
+    paddingLeft: isMobile ? '24px' : getPaddingSide(ref),
+    paddingRight: isMobile ? '24px' : getPaddingSide(ref)
   };
 };
 
@@ -44,7 +44,7 @@ const CardProcess = ({ number, title, description, image }) => {
   return (
     <div className="rounded-[40px] border border-gray-primary shadow-lg overflow-hidden h-full">
       <div className="w-full h-[192px] relative">
-        <Image src={image} alt={title} fill />
+        <Image src={image} alt={title} fill className="object-cover" />
         <div className="absolute inset-0 gradient-card-process" />
         <h2 className="font-medium text-[52px] md:text-[80px] leading-[76px] md:leading-[90px] text-white-primary font-inter absolute bottom-0 right-5">
           {number}
@@ -72,13 +72,13 @@ export default function FlowProcess() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    const handleResize = () => setStyleSwiper(getStylesCarosel(ref.current));
+    const handleResize = () => setStyleSwiper(getStylesCarosel(ref.current, displaySize.small));
 
     handleResize();
     window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [displaySize]);
 
   return (
     <div className="mt-10 md:mt-[140px] relative">
@@ -93,14 +93,14 @@ export default function FlowProcess() {
           </div>
         )}
       </div>
-      <div className="flex mt-7 px-6 md:px-0">
+      <div className="flex mt-7">
         <Swiper
           key={ref.current}
           onInit={(swiper) => setSwiper(swiper)}
           modules={[Pagination, Scrollbar]}
-          spaceBetween={50}
+          spaceBetween={displaySize.small ? 24 : 50}
           breakpoints={{
-            220: { slidesPerView: 1 },
+            220: { slidesPerView: 1.1 },
             780: { slidesPerView: 2 },
             1024: { slidesPerView: 2.8 }
           }}
