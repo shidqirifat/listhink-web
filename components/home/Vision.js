@@ -16,11 +16,11 @@ const Section = ({ children }) => {
 
 const Separator = () => {
   const { displaySize } = useSelector((state) => state);
-  const size = displaySize.small ? 38 : 76;
+  const size = displaySize.small || displaySize.medium ? 38 : 76;
 
   return (
-    <div className="flex items-center gap-5 md:gap-4 mt-8 md:mt-1">
-      <div className="h-[2px] w-10/12 bg-green-primary" />
+    <div className="flex items-center justify-between gap-4 md:gap-5 mt-8 md:mt-1">
+      <div className="h-[2px] w-full bg-green-primary" />
       <Image src={Star} alt="Star" width={size} height={size} />
     </div>
   );
@@ -31,7 +31,7 @@ const CardValue = ({ title, icon, description }) => {
   const size = displaySize.small ? 44 : 70;
 
   return (
-    <div className="p-8 rounded-3xl bg-white shadow-md md:w-[29%] h-full md:h-[372px]">
+    <div className="p-8 rounded-3xl bg-white shadow-md w-full md:w-[47%] lg:w-[29%] h-full md:h-[372px]">
       <div
         className="bg-green-secondary-hover rounded-3xl 
       grid place-content-center w-[72px] md:w-[108px] h-[72px] md:h-[108px]">
@@ -52,20 +52,20 @@ const CardValue = ({ title, icon, description }) => {
 export default function Vision() {
   const { t } = useTranslation();
   return (
-    <div className="mt-[72px] py-8 md:pb-24 md:pt-[72px] bg-green-secondary-hover">
-      <div className="max-w-7xl px-8 md:px-3 mx-auto">
+    <div className="mt-[72px] py-8 md:pb-16 md:pt-[72px] bg-green-secondary-hover">
+      <div className="max-w-7xl px-8 lg:px-3 mx-auto">
         <div className="flex flex-col md:flex-row gap-4 md:gap-32">
           <Section>{t('vision_section')}</Section>
           <h2
             className="text-black-primary font-inter font-medium text-2xl md:text-[40px] 
-          leading-7 md:leading-[48px] md:w-8/12">
+          leading-7 md:leading-[48px] w-10/12 md:w-8/12">
             {t('vision_title')}
           </h2>
         </div>
         <Separator />
         <div className="mt-8 md:mt-0">
           <Section>{t('value_section')}</Section>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-[74px] mt-4 md:mt-9">
+          <div className="flex flex-wrap justify-center gap-8 lg:gap-[74px] mt-4 md:mt-9">
             {t('values', { returnObjects: true }).map((value) => (
               <CardValue
                 key={value.title}
