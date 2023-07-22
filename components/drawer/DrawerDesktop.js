@@ -22,7 +22,7 @@ const TextNav = ({ children, link }) => {
 export default function DrawerDesktop({ isFooter }) {
   const { t } = useTranslation();
   return (
-    <div className="max-w-7xl px-3 mx-auto hidden md:flex justify-between items-center h-20">
+    <div className="max-w-7xl px-3 xl:px-0 mx-auto hidden md:flex justify-between items-center h-20">
       <Image src={ListhinkFull} alt="Logo Listhink Studio" width={128} height={56} />
       <nav>
         <ul className="flex items-center justify-center gap-16">

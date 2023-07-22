@@ -22,7 +22,7 @@ const PopUpDrawer = ({ onToggle, isActive }) => {
         <Image src={Close} alt="Close Drawer" width={18} height={18} />
       </button>
       <div className="text-center mt-28">
-        <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex flex-col lg:flex-row gap-4">
           {t('navigations', { returnObjects: true }).map((navigation) => (
             <Link
               key={navigation.link}
@@ -52,7 +52,7 @@ export default function DrawerMobile() {
     <>
       <PopUpDrawer onToggle={onToggle} isActive={isPopUp} />
 
-      <div className="py-4 px-6 flex justify-between items-center">
+      <div className="py-4 px-8 flex justify-between items-center">
         <Image src={Listhink} alt="Logo Listhink Studio" width={26} height={42} />
         <button onClick={onToggle}>
           <Image src={Hamburger} alt="Hamburger Button" width={32} height={32} />
