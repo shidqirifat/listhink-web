@@ -19,8 +19,8 @@ const getStylesCarosel = (ref, isMobile) => {
 
   return {
     paddingBottom: '70px',
-    paddingLeft: isMobile ? '24px' : getPaddingSide(ref),
-    paddingRight: isMobile ? '24px' : getPaddingSide(ref)
+    paddingLeft: isMobile ? '32px' : getPaddingSide(ref),
+    paddingRight: isMobile ? '32px' : getPaddingSide(ref)
   };
 };
 
@@ -72,7 +72,8 @@ export default function FlowProcess() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    const handleResize = () => setStyleSwiper(getStylesCarosel(ref.current, displaySize.small));
+    const handleResize = () =>
+      setStyleSwiper(getStylesCarosel(ref.current, displaySize.small || displaySize.medium));
 
     handleResize();
     window.addEventListener('resize', handleResize);
@@ -81,8 +82,8 @@ export default function FlowProcess() {
   }, [displaySize]);
 
   return (
-    <div className="mt-10 md:mt-[140px] relative">
-      <div ref={ref} className="max-w-7xl px-6 md:px-3 mx-auto flex justify-between items-center">
+    <div className="mt-10 md:mt-[72px] lg:mt-[140px] relative">
+      <div ref={ref} className="max-w-7xl px-8 lg:px-3 mx-auto flex justify-between items-center">
         <h1 className="font-inter font-semibold text-2xl md:text-[40px] leading-7 md:leading-[48px] text-black-primary">
           {t('flow_process_title')}
         </h1>
@@ -101,7 +102,8 @@ export default function FlowProcess() {
           spaceBetween={displaySize.small ? 24 : 50}
           breakpoints={{
             220: { slidesPerView: 1.1 },
-            780: { slidesPerView: 2 },
+            560: { slidesPerView: 2 },
+            860: { slidesPerView: 2.2 },
             1024: { slidesPerView: 2.8 }
           }}
           navigation
