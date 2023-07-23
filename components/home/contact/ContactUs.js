@@ -77,16 +77,17 @@ const ImageContact = ({ isMobile }) => {
   return (
     <div className="relative">
       <div
-        className={`bg-yellow-primary rounded-full grid place-content-center absolute ${styleArrow}`}>
+        className={`bg-yellow-primary rounded-full grid place-content-center absolute z-10 ${styleArrow}`}>
         <Image src={Arrow} alt="Arrow" width={sizeArrow} height={sizeArrow} className="rotate-90" />
       </div>
-      <Image
-        src="/assets/images/contact-us.png"
-        alt="Contact us image"
-        width={502}
-        height={510}
-        className="rounded-tl-[80px] shadow-lg"
-      />
+      <div className="relative aspect-square">
+        <Image
+          src="/assets/images/contact-us.png"
+          alt="Contact us image"
+          fill
+          className="rounded-tl-[80px] shadow-lg"
+        />
+      </div>
     </div>
   );
 };
@@ -95,12 +96,12 @@ export default function ContactUs() {
   const { displaySize } = useSelector((state) => state);
   const { t } = useTranslation();
   return (
-    <div className="max-w-7xl md:px-3 mx-auto mt-[92px] pb-8 md:pb-32 relative">
-      <div className="py-8 md:py-11 px-6 md:px-16 bg-yellow-primary md:rounded-[80px]">
-        <div className="w-[250px] md:w-[270px] h-[315px] absolute left-[50%] translate-x-[-50%] md:left-16 md:translate-x-0 -top-16">
+    <div className="max-w-7xl lg:px-3 xl:px-0 mx-auto mt-[92px] pb-8 md:pb-32 relative">
+      <div className="py-8 lg:py-11 px-6 lg:px-16 bg-yellow-primary lg:rounded-[80px]">
+        <div className="w-[250px] md:w-[270px] h-[315px] md:h-[350px] absolute left-[50%] translate-x-[-50%] md:left-16 md:translate-x-0 -top-16">
           <Image src="/assets/images/discuss.png" alt="Discussion" fill />
         </div>
-        <div className="md:ml-[40%] mt-60 md:mt-0">
+        <div className="md:ml-[45%] lg:ml-[40%] mt-60 md:mt-0">
           <h1
             className="font-inter font-semibold text-[40px] md:text-[48px] 
           leading-[48px] md:leading-[58px] text-black-primary mb-8 md:mb-[42px]">
@@ -113,19 +114,19 @@ export default function ContactUs() {
       </div>
       <div
         id="contact-us"
-        className="pt-[86px] md:pt-36 grid md:grid-cols-[auto_510px] gap-10 md:gap-24 px-6 md:px-0">
+        className="pt-[86px] md:pt-36 grid md:grid-cols-2 gap-10 md:gap-24 px-6 md:px-8 lg:px-0">
         {displaySize.small && <ImageContact isMobile />}
 
         <div className="mt-8 md:mt-0">
           <h1 className="font-semibold text-[40px] md:text-[80px] leading-[48px] md:leading-[96px] text-black-primary font-inter">
             {t('contact_us_title')}
           </h1>
-          <h2 className="font-medium text-2xl leading-9 text-black-primary mt-4 md:mt-10 mb-10 md:mb-6 max-w-xl">
+          <h2 className="font-medium text-2xl leading-9 text-black-primary mt-4 md:mt-10 mb-10 md:mb-6 md:max-w-xl">
             {t('contact_us_desc')}
           </h2>
           <FormContact />
         </div>
-        <div className="grid grid-cols-2 gap-10 md:block">
+        <div className="grid grid-cols-2 gap-10 md:block sm:ml-10 md:ml-0">
           {displaySize.small ? <MenuWrapper /> : <ImageContact />}
           <Socials />
         </div>

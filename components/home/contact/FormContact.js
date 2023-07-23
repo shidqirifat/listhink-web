@@ -22,7 +22,7 @@ export default function FormContact() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-[430px]">
+    <form onSubmit={handleSubmit} className="md:max-w-[430px]">
       <Input
         name="name"
         value={form.name}
